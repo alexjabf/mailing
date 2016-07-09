@@ -1,0 +1,17 @@
+DEFAULTS: &DEFAULTS
+    adapter: mysql2
+    encoding: utf8
+    database: movies
+    username: root
+    password: mysql
+    host: localhost
+    port: 3306
+
+development:
+    <<: *DEFAULTS
+
+test:
+    <<: *DEFAULTS
+
+production:
+    <<: *DEFAULTS
