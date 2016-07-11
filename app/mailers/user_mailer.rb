@@ -5,10 +5,12 @@ class UserMailer < ApplicationMailer
   #
   #   en.user_mailer.welcome.subject
   #
-  def welcome(sender, email)
-    @greeting = "Hola #{sender}"
+  default from: "Desafio Latam"
+  def welcome(user)
+    @user = user
+    @greeting = "Hola #{user.name}"
 
-    mail to: email,
+    mail to: user.email,
       subject: @greeting
   end
 end

@@ -1,6 +1,5 @@
 class MoviesController < ApplicationController
   before_action :set_movie, only: [:show, :edit, :update, :destroy]
-  skip_before_filter :filter_admin!, only: [:index]  
   load_and_authorize_resource 
   #load_and_authorize_resource through: :tag
   
